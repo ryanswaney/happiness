@@ -1,0 +1,8 @@
+.content-area {
+  @include outer-container;
+}
+.site-main {
+  @include span-columns(8);
+  @include shift(2);
+  background: lighten(#000, 90%);
+}

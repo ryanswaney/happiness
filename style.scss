@@ -1,0 +1,20 @@
+/*!
+Theme Name: Happiness
+Theme URI: 
+Author: Ryan Swaney
+Author URI: smashandgrablabs.com
+Description: WordPress theme for the World Happiness Report
+Version: 1.0-wpcom
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: happiness
+Tags:
+
+*/
+
+
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+@import "scss/_grid";
+@import "scss/_navigation"
