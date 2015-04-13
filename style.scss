@@ -12,9 +12,13 @@ Tags:
 
 */
 
+@import "scss/normalize";
 
 @import "bourbon/bourbon";
 @import "neat/neat";
 
-@import "scss/_grid";
-@import "scss/_navigation"
+@import "scss/settings";
+
+@import "scss/grid";
+@import "scss/navigation";
+@import "scss/posts";

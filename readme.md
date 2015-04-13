@@ -4,7 +4,12 @@ The World Happiness Report is a measure of happiness published by the [Sustainab
 
 ## Dependencies
 
-This theme uses [Bourbon](http://bourbon.io/), [Neat](http://neat.bourbon.io/), and [ACF PRO](http://www.advancedcustomfields.com/pro/).
+This theme uses
+
+1. [Normalize](https://github.com/necolas/normalize.css/)
+2. [Bourbon](http://bourbon.io/)
+3. [Neat](http://neat.bourbon.io/)
+4. [ACF PRO](http://www.advancedcustomfields.com/pro/)
 
 ### References
 
