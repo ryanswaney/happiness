@@ -31,7 +31,4 @@ get_header(); ?>
     </main><!-- #main -->
   </div><!-- #primary -->
 
-<script src="//use.typekit.net/vaz6tdr.js"></script>
-<script>try{Typekit.load();}catch(e){}</script>
-
 <?php get_footer(); ?>

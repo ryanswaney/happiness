@@ -65,7 +65,17 @@ add_action( 'after_setup_theme', 'happiness_setup' );
 
 /* register sidebars etc. */
 
-/* enqueue scripts */
+/**
+ * Enqueue scripts and styles.
+ */
+function happiness_scripts() {
+  wp_enqueue_style( 'happiness-style', get_stylesheet_uri() );
+
+  //wp_enqueue_script('jquery');
+
+  wp_enqueue_script( 'happiness-js', get_template_directory_uri() . '/js/happiness.js', array('jquery'), '20120206', true );
+}
+add_action( 'wp_enqueue_scripts', 'happiness_scripts' );
 
 /* Set up options page via Advanced Custom Fields Pro */
 require get_template_directory() . '/inc/acf-options.php';
