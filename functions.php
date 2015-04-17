@@ -80,5 +80,10 @@ add_action( 'wp_enqueue_scripts', 'happiness_scripts' );
 /* Set up options page via Advanced Custom Fields Pro */
 require get_template_directory() . '/inc/acf-options.php';
 
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags.php'
+
 
 ?>

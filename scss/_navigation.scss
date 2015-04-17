@@ -93,13 +93,13 @@
 
   // The nav items
 
-  .nav-link:first-child {
+  .menu-item:first-child {
     @include media($horizontal-bar-mode) {
       margin-left: $centered-navigation-item-nudge;
     }
   }
 
-  ul li.nav-link {
+  ul li.menu-item {
     background: $centered-navigation-background;
     display: block;
     line-height: $centered-navigation-height;
@@ -132,7 +132,7 @@
     }
   }
 
-  li.logo.nav-link {
+  li.logo.menu-item {
     display: none;
     line-height: 0;
 
@@ -150,7 +150,7 @@
 
   // Sub menus
 
-  li.menu-item-has-children.nav-link {
+  li.menu-item-has-children.menu-item {
     padding-right: 0;
 
     @include media($large-screen) {

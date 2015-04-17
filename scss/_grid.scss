@@ -21,9 +21,8 @@
 // FOOTER
 .footer {
   $base-spacing: 1.5em !default;
-  $action-color: #62a60a !default;
-  //$medium-screen: em(640) !default;
-  //$large-screen: em(860) !default;
+  //$action-color: #62a60a !default;
+  $action-color: #40b4e4;
   $footer-background: desaturate(darken($action-color, 20%), 30%);
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, 0.6);

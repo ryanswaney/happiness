@@ -26,14 +26,14 @@
 <header class="centered-navigation" role="banner">
   <div class="centered-navigation-wrapper">
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="mobile-logo">
-      <img src="http://happiness.local/wp-content/uploads/2015/04/whr-logo-small.png">
+      <img src="<?php the_field('logo_mobile', 'option'); ?>">
     </a>
     <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
     <nav role="navigation">
       <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
-      <li class="nav-link logo">
+      <li class="menu-item logo">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo">
-          <img src="http://happiness.local/wp-content/uploads/2015/04/whr-logo.png">
+          <img src="<?php the_field('logo', 'option'); ?>">
         </a>
       </li>
 
@@ -45,7 +45,7 @@
           'container'       => '',
           'container_class' => '',
           'container_id'    => '',
-          'menu_class'      => 'nav-link',
+          'menu_class'      => '',
           'menu_id'         => '',
           'echo'            => true,
           'fallback_cb'     => 'wp_page_menu',
