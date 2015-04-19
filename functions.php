@@ -83,7 +83,12 @@ require get_template_directory() . '/inc/acf-options.php';
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/inc/template-tags.php'
+require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Custom Post Type for WHR Editions
+ */
+require get_template_directory() . '/inc/cpt-report-editions.php';
 
 
 ?>

@@ -132,6 +132,10 @@
     }
   }
 
+  li.current-menu-item {
+    a { font-weight: 700; }
+  }
+
   li.logo.menu-item {
     display: none;
     line-height: 0;
