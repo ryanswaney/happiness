@@ -17,7 +17,15 @@ get_header(); ?>
 
       <?php while ( have_posts() ) : the_post(); ?>
 
+        <?php if ( $post->ID == 96 ) : ?>
+
+        <?php get_template_part( 'content', 'download' ); ?>
+
+        <?php else : ?>
+
         <?php get_template_part( 'content', 'page' ); ?>
+
+        <?php endif; ?>
 
         <?php
           // If comments are open or we have at least one comment, load up the comment template

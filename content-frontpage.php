@@ -10,9 +10,20 @@ $post_objects = get_field('front_page_sections');
 if( $post_objects ): ?>
 
     <?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
+
         <?php setup_postdata($post); ?>
 
+        <?php //print_r($post); ?>
+
+        <?php if ( $post->post_type == 'report_edition' ) : ?>
+
+        <?php get_template_part( 'content', 'report'); ?>
+
+        <?php else : ?>
+
         <?php get_template_part( 'content', 'page' ); ?>
+
+        <?php endif; ?>
 
     <?php endforeach; ?>
 

@@ -26,7 +26,9 @@
   $footer-background: desaturate(darken($action-color, 20%), 30%);
   $footer-color: white;
   $footer-link-color: transparentize($footer-color, 0.6);
-  $footer-disclaimer-color: transparentize($footer-color, 0.6);
+  // $footer-disclaimer-color: transparentize($footer-color, 0.2);
+  $footer-disclaimer-color: $footer-color;
+  $footer-disclaimer-link-color: lighten($action-color, 40%);
 
   //background: $footer-background;
   background: $action-color;
@@ -106,5 +108,8 @@
     margin: auto;
     max-width: 35em;
     text-align: center;
+
+    a { 
+      color: $footer-color; }
   }
 }

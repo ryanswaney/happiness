@@ -1,9 +1,16 @@
+// Page Header
+.page-header {
+  text-align: center;
+}
+.page-title {
+  color: lighten($base-font-color, 25%);
+  font-size: $base-font-size * 2;
+  text-transform: uppercase;
+}
+
+// Post Styles
 .entry-header {
-
-  //border-bottom: 1px solid #ccc;
-  //border-top: 1px solid #ccc;
   margin: 1rem 0;
-
 }
 
 .entry-title {
@@ -56,6 +63,7 @@
 
   a {
     color: $highlight-color;
+    text-decoration: none;
 
     &:active,
     &:focus,
@@ -63,26 +71,71 @@
       color: lighten( $highlight-color, 20% );
     }
   }
+
+  ul,
+  ol {
+
+    clear: left;
+    li { margin-bottom: 1em; }
+  }
 }
 
 .post {
+  margin-top: 2em;
   .entry-footer {
     border-bottom: 1px solid $base-border-color;
     padding-bottom: 1rem;
   }
 }
 
+.posted-on {
+  a { 
+    color: $highlight-color;
+    text-decoration: none; }
+}
+
+body.blog,
+body.archive,
+body.single {
+  .post:last-of-type {
+
+    .entry-footer{
+    border-bottom: none;
+    }
+  }
+}
+
 body.home {
 
-    article.page {
+    article.page,
+    article.report_edition {
     border-bottom: 1px solid $base-border-color;
     padding-bottom: 1em;
-    margin-bottom: 1em;
+    margin-bottom: $base-spacing * 3;
   }
 
   .site-main {
     .page:last-of-type {
       border-bottom: none;
     }
+  }
+}
+
+// Misc WordPress styles from the WPEditor
+.aligncenter,
+.alignleft {
+  width: auto;
+  margin: auto 1em 1em 1em;
+
+  @include media($large-screen) {
+    float: left;
+    margin: auto 2em 1.5em 0;
+  }
+}
+.alignright {
+
+    @include media($large-screen) {
+    float: right;
+    margin: auto 0 1.5em 1.5em;
   }
 }

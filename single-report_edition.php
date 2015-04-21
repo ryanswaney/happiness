@@ -6,12 +6,13 @@
  */
 get_header(); ?>
 
+  <!-- Report -->
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
 
     <?php while ( have_posts() ) : the_post(); ?>
 
-      <?php get_template_part( 'content', 'single' ); ?>
+      <?php get_template_part( 'content', 'report' ); ?>
 
       <?php //the_post_navigation(); ?>
 
