@@ -105,8 +105,8 @@
     color: $footer-disclaimer-color;
     font-size: 1em;
     line-height: 1.5em;
-    margin: auto;
-    max-width: 35em;
+    @include margin(1em auto);
+    max-width: 40em;
     text-align: center;
 
     a { 
