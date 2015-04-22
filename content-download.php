@@ -14,10 +14,10 @@
     <?php the_content(); ?>
   </div><!-- .entry-content -->
 
-    <footer class="entry-footer">
-    <?php //edit_post_link( __( 'Edit', 'happiness' ), '<span class="edit-link">', '</span>' ); ?>
-  </footer><!-- .entry-footer -->
+    <footer class="entry-footer"></footer><!-- .entry-footer -->
 </article><!-- #post-## -->
+
+<!-- downloads! -->
 
 <?php
 
@@ -29,7 +29,15 @@ if( $post_objects ): ?>
 
         <?php setup_postdata($post); ?>
 
+        <?php if ( $post->post_type == 'report_edition' ) : ?>
+
         <?php get_template_part( 'content', 'report' ); ?>
+
+        <?php else : ?>
+
+        <?php get_template_part( 'content', 'page' ); ?>
+
+        <?php endif; ?>
 
     <?php endforeach; ?>
 

@@ -80,8 +80,11 @@
   }
 }
 
-.post {
-  margin-top: 2em;
+.post,
+.report_edition {
+
+  margin: 4em 0;
+
   .entry-footer {
     border-bottom: 1px solid $base-border-color;
     padding-bottom: 1rem;
