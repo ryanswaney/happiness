@@ -12,28 +12,6 @@
 
 <footer id="colophon" class="footer" role="contentinfo">
 
-<!--
-  <div class="footer-links">
-    <ul>
-      <li><h3>Header</h3></li>
-      <li><a href="javascript:void(0)">Link</a></li>
-      <li><a href="javascript:void(0)">Link</a></li>
-      <li><a href="javascript:void(0)">Link</a></li>
-    </ul>
-    <ul>
-      <li><h3>Header</h3></li>
-      <li><a href="javascript:void(0)">Link</a></li>
-      <li><a href="javascript:void(0)">Link</a></li>
-      <li><a href="javascript:void(0)">Link</a></li>
-    </ul>
-    <ul>
-      <li><h3>Header</h3></li>
-      <li><a href="javascript:void(0)">Link</a></li>
-      <li><a href="javascript:void(0)">Link</a></li>
-    </ul>
-  </div>
--->
-
     <div class="footer-logo">
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
       <img src="<?php the_field('logo_reversed', 'option'); ?>">

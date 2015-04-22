@@ -14,9 +14,19 @@
 
   <div class="entry-content">
     <?php the_content(); ?>
+
+
+    <?php 
+      // Load MailChimp form on Learn More page
+      if ( $post->post_name == 'learn-more' ) :
+        get_template_part( 'content', 'mailchimp' );
+      endif;
+    ?>
+
   </div><!-- .entry-content -->
 
   <footer class="entry-footer">
     <?php //edit_post_link( __( 'Edit', 'happiness' ), '<span class="edit-link">', '</span>' ); ?>
   </footer><!-- .entry-footer -->
 </article><!-- #post-## -->
+

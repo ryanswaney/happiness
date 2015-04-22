@@ -1,0 +1,78 @@
+.mailchimp-container {
+  @include outer-container;
+
+  @include margin(2em 0);
+}
+.mailchimp-form {
+  width: 100%;
+
+  @include media($large-screen) {
+    width: 60%;
+    @include margin(null auto);
+  }
+}
+
+.mc-field-group {
+  @include margin(1em 0);
+  width: 100%;
+
+  label {
+    display: block;
+    width: 100%;
+  }
+  input {
+    display: block;
+    width: 100%;
+  }
+
+}
+
+.button {
+  @include button(flat, $highlight-color);
+  font-size: 1em;
+  color: white;
+  font-family: $navigation-font-family;
+  font-weight: 300;
+  line-height: $base-line-height;
+  margin-bottom: .3em;
+  margin-right: 0.5em;
+  outline: none;
+  padding: .3em 1em;
+  width: 50%;
+}
+
+
+// Other Newsletters
+.newsletters {
+  @include outer-container;
+  @include margin(4em null);
+
+  div {
+    @include span-columns(6);
+    text-align: center;
+  }
+
+}
+
+
+// MailChimp Errors & Responses
+
+.indicates-required {
+  text-align: right;
+  font-size: $base-font-size / 1.5;
+}
+.asterisk {
+  color: red;
+}
+.mc-responses-container {
+  @include margin(1em 0);
+}
+
+input.mce_inline_error{
+  border-color: red !important;
+}
+#mc_embed_signup div.mce_inline_error {
+  background-color: red !important;
+  font-family: $navigation-font-family;
+  font-weight: 300 !important;
+}

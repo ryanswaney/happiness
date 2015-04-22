@@ -27,7 +27,15 @@
 
   <?php endwhile; ?>
 
-  <?php the_posts_navigation(); ?>
+  <?php
+  // Previous/next page navigation.
+    the_posts_pagination( array(
+      'prev_text'          => __( 'Previous', 'happiness' ),
+      'next_text'          => __( 'Next', 'happiness' ),
+      'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( '', 'happiness' ) . ' </span>',
+      'screen_reader_text' => __( 'More News', 'happiness' )
+    ) );
+  ?>
 
 <?php else : ?>
 
