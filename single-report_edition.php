@@ -18,6 +18,18 @@ get_header(); ?>
 
     <?php endwhile; // end of the loop. ?>
 
+    <?php if ( $post->post_name == '2015' ) : ?>
+
+      <?php $subscription_page_query = new WP_Query( 'pagename=learn-more' ); ?>
+
+      <?php while ( $subscription_page_query ->have_posts() ) : $subscription_page_query ->the_post(); ?>
+        <?php get_template_part ('content', 'page'); ?>
+      <?php endwhile; ?>
+
+      <?php wp_reset_postdata(); ?>
+
+    <?php endif; ?>
+
     </main><!-- #main -->
   </div><!-- #primary -->
 
