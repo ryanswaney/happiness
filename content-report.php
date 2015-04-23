@@ -13,7 +13,13 @@
   </header><!-- .entry-header -->
 
   <div class="entry-content">
-    <?php the_content(); ?>
+
+    <?php if ( is_page( 'home' ) || is_page( 'download' ) ) : ?>
+      <?php the_excerpt(); ?>
+    <?php else : ?>
+      <?php the_content(); ?>
+    <?php endif; ?>
+    
   </div><!-- .entry-content -->
 
   <?php
