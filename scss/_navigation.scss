@@ -8,7 +8,7 @@
   $centered-navigation-background: lighten($highlight-color, 44%);
   $centered-navigation-color: transparentize($base-font-color, 0.3);
   $centered-navigation-color-hover: $base-font-color;
-  $centered-navigation-height: em(60);
+  $centered-navigation-height: 60px;
   $centered-navigation-item-padding: 1em;
   $centered-navigation-submenu-padding: 1em;
   $centered-navigation-submenu-width: 12em;
@@ -297,4 +297,48 @@
     border-bottom: 1px solid $highlight-color;
   }
   
+}
+
+// Social Share Nav
+.social-share {
+  @include padding(.25em 1em);
+  background: transparentize( $action-color, .1 );
+  text-align: right;
+  color: white;
+  position: relative;
+  z-index: 99999;
+  width: 100%;
+
+  @include media($large-screen) {
+    position: fixed;
+    top: 0;
+  }
+  
+  ul {
+    @include margin(0);
+
+    li { 
+      display: inline-block;
+      margin-right: 1em;
+
+      a { text-decoration: none; }
+    }
+  }
+}
+
+.share-button-icon,
+.share-button-label {
+  display: inline-block;
+  vertical-align: middle;
+}
+.share-button-icon {
+  width: 1em;
+  height: 1em;
+  margin-right: .2em;
+}
+.share-button-icon path { fill: #fff; }
+.share-button-label {
+  font-size: $base-font-size / 1.5;
+  font-weight: 400;
+  color: white;
 }
