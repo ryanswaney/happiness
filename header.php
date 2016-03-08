@@ -18,7 +18,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-    
+
 <div id="page" class="hfeed site">
 
 <div id="content" class="site-content">
@@ -51,17 +51,21 @@
 
   <div class="centered-navigation-wrapper">
 
+    <!--
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="mobile-logo">
       <img src="<?php the_field('logo_mobile', 'option'); ?>">
     </a>
+  -->
     <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
     <nav role="navigation">
       <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
+      <!--
       <li class="menu-item logo">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo">
           <img src="<?php the_field('logo', 'option'); ?>">
         </a>
       </li>
+      -->
 
       <?php
 
@@ -87,7 +91,7 @@
         wp_nav_menu( $defaults );
 
         ?>
-        
+
       </ul>
     </nav>
   </div>

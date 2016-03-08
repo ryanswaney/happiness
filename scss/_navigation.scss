@@ -15,7 +15,8 @@
   $centered-navigation-item-nudge: 2.2em;
   $horizontal-bar-mode: $large-screen;
 
-  background-color: $centered-navigation-background;
+  //background-color: $centered-navigation-background;
+  //background-color: $base-bg-color;
   //border-bottom: 1px solid darken($centered-navigation-background, 6%);
   min-height: $centered-navigation-height;
   width: 100%;
@@ -296,11 +297,12 @@
   .page-numbers.current {
     border-bottom: 1px solid $highlight-color;
   }
-  
+
 }
 
 // Social Share Nav
 .social-share {
+  display: none;
   @include padding(.25em 1em);
   background: transparentize( $action-color, .1 );
   text-align: right;
@@ -313,11 +315,11 @@
     position: fixed;
     top: 0;
   }
-  
+
   ul {
     @include margin(0);
 
-    li { 
+    li {
       display: inline-block;
       margin-right: 1em;
 

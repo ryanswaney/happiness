@@ -3,7 +3,8 @@ $heading-font-family: "proxima-nova", "Proxima Nova", sans-serif;
 $navigation-font-family: "proxima-nova", "Proxima Nova", sans-serif;
 
 // Font Sizes
-$base-font-size: 1em;
+//$base-font-size: 1em;
+$base-font-size: 100%;
 
 // Line height
 $base-line-height: 1.5;
@@ -16,10 +17,14 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
+$base-bg-color: #b7b2b4;
 $base-font-color: #333;
+$color-accent: #ed1e79; 
 $highlight-color: #f99d1c;
+$highlight-bg-color: #ed1e79;
 $base-border-color: #ccc;
-$action-color: #40b4e4;
+//$action-color: #40b4e4;
+$action-color: #ed1e79;
 
 // Screen Sizing
 $medium-screen: em(640) !default;

@@ -14,8 +14,11 @@
   }
 }
 
-.site-content {
-  
+.site {
+  background-color: #fff;
+  //background: linear-gradient(180deg, $base-bg-color, white);
+  border-left: $highlight-bg-color solid 6px;
+  border-right: $highlight-bg-color solid 6px;
 }
 
 // FOOTER
@@ -30,7 +33,7 @@
   $footer-disclaimer-link-color: lighten($action-color, 40%);
 
   //background: $footer-background;
-  background: $action-color;
+  background: $base-bg-color;
   padding: ($base-spacing * 2) $gutter;
   width: 100%;
 
@@ -45,7 +48,7 @@
       &:hover,
       &:focus { opacity: .75; }
     }
-  } 
+  }
 
   .footer-links {
     @include clearfix;
@@ -92,7 +95,7 @@
     font-size: 1em;
     font-weight: 800;
     margin-bottom: 0.4em;
-  }  
+  }
 
   hr {
     border: 1px solid transparentize($footer-disclaimer-color, 0.3);
@@ -108,7 +111,7 @@
     max-width: 40em;
     text-align: center;
 
-    a { 
+    a {
       color: $footer-color; }
   }
 }

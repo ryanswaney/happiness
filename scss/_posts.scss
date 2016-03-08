@@ -14,11 +14,20 @@
 }
 
 .entry-title {
-  font-size: 1.750rem;
-  text-align: center;
+  //font-size: 1.750rem;
+  //text-align:c enter;
+  font-size: 4rem;
+  font-size: 5vw;
+  text-align: left;
   text-transform: uppercase;
+  background-color: $highlight-bg-color;
+  //background: linear-gradient(90deg,rgba(160,4,73,.80) 0%, rgba(237,30,121,.8) 35%, rgba(240,221,54,.8) 100%);
+  background: linear-gradient(90deg,rgba(160,4,73,.80) 0%, rgba(237,30,121,.8) 100%);
+  color: #fff;
+  padding: 0 .3em;
+  display: inline-block;
 
-  a { 
+  a {
     color: $highlight-color;
     text-decoration: none;
     transition: color 0.5s ease;
@@ -33,7 +42,7 @@
 }
 
 .entry-meta {
-  font-family: $base-font-family; 
+  font-family: $base-font-family;
   font-size: 1em;
   font-style: italic;
   text-align: center;
@@ -42,16 +51,23 @@
 .entry-content {
 
   p {
-    font-size: 1.125em;
+    //font-size: 1.125em;
+    font-size: 1.25em;
     line-height: 1.5;
   }
 
   h1,
   h2,
   h3 {
-    font-size: 1.5em;
-    font-weight: 400;
-    color: $highlight-color;
+    //font-size: 1.5em;
+    font-size: 2em;
+    font-weight: 300;
+    //color: $highlight-color;
+    //color: #fff;
+    //background-color: $highlight-bg-color;
+    //display: inline-block;
+    //padding: .3em;
+    //margin: 0;
   }
   h4,
   h5,
@@ -62,13 +78,16 @@
   }
 
   a {
-    color: $highlight-color;
+    color: $base-font-color;
     text-decoration: none;
+    border-bottom: $highlight-bg-color solid .1em;
 
     &:active,
     &:focus,
     &:hover {
-      color: lighten( $highlight-color, 20% );
+      color: $highlight-bg-color;
+      //color: lighten( $base-font-color, 20% );
+      border-bottom: lighten($highlight-bg-color, 10%) solid .1em;
     }
   }
 
@@ -92,7 +111,7 @@
 }
 
 .posted-on {
-  a { 
+  a {
     color: $highlight-color;
     text-decoration: none; }
 }

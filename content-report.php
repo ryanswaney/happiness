@@ -19,7 +19,7 @@
     <?php else : ?>
       <?php the_content(); ?>
     <?php endif; ?>
-    
+
   </div><!-- .entry-content -->
 
   <?php
@@ -43,12 +43,23 @@
       while ( have_rows('report_files') ) : the_row();
 
       $attachment_id = get_sub_field('file');
-      $url = wp_get_attachment_url( $attachment_id );
-      $title = get_the_title( $attachment_id );
-      $filesize = size_format( filesize( get_attached_file( $attachment_id ) ), 2 );
+      $attachment_meta =  wp_prepare_attachment_for_js($attachment_id);
+      $title = $attachment_meta ['title'];
+      $description = $attachment_meta['description'];
+      $url = $attachment_meta['url'];
+      $filesize = $attachment_meta['filesizeHumanReadable'];
+      //$url = wp_get_attachment_url( $attachment_id );
+      //$title = get_the_title( $attachment_id );
+      //$description = get_post_meta($attachment_id, 'post_content');
+      //$filesize = size_format( filesize( get_attached_file( $attachment_id ) ), 2 );
   ?>
     <tr>
-    <td><?php echo $title; ?></td>
+    <td>
+      <?php echo $title; ?>
+      <?php if($description != ''): ?>
+      <p><?php echo $description; ?></p>
+      <?php endif; // description ?>
+    </td>
     <td><?php echo $filesize; ?></td>
     <td>
       <a href="<?php echo $url; ?>">Download</a>
