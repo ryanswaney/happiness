@@ -1,5 +1,6 @@
 .table-downloads {
-  $base-border-color: gainsboro !default;
+  //$base-border-color: gainsboro !default;
+  $base-border-color: lighten(#059EBA, 50%);
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
   $base-line-height: 1.5em !default;
@@ -15,13 +16,15 @@
   $table-border: 1px solid $table-border-color;
   $table-background: $base-background-color;
   $table-header-background: lighten($table-background, 10);
-  $table-hover-background: lighten($highlight-color, 44%);
+  //$table-hover-background: lighten(#059EBA, 44%);
+  $table-hover-background: lighten(#059EBA, 60%);
   $table-stripe-background: darken($table-background, 4);
   $table-stripe-background-hover: darken($table-stripe-background, 5);
   $table-padding: .75em 1em;
 
   border-collapse: separate;
   border-spacing: 0;
+  margin-bottom: 1.125em;
   width: 100%;
 
   tbody {
@@ -72,6 +75,10 @@
           width: auto;
         }
       }
-    }
+    } // table cell
+
+    tr.highlighted > td {
+      background-color: $table-hover-background;
+    } // highlighted table cell
   }
 }

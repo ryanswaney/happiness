@@ -53,7 +53,7 @@
       //$description = get_post_meta($attachment_id, 'post_content');
       //$filesize = size_format( filesize( get_attached_file( $attachment_id ) ), 2 );
   ?>
-    <tr>
+  <tr <?php if( get_sub_field('file_highlight') ) { echo 'class="highlighted"'; } ?>>
     <td>
       <?php echo $title; ?>
       <?php if($description != ''): ?>
@@ -62,24 +62,22 @@
     </td>
     <td><?php echo $filesize; ?></td>
     <td>
-      <a href="<?php echo $url; ?>">Download</a>
+      <a href="<?php echo $url; ?>" title="Download: <?php echo $title.' ('.$filesize.')' ?>">Download</a>
     </td>
     </tr>
-  <?php
-
-      endwhile;
-
-  ?>
+  <?php endwhile; ?>
   </tbody>
   </table>
-  <?php
-  else :
-
-      // no rows found
+  <?php else :
+    // no rows found
     echo 'No files found.';
+  endif; ?>
 
-  endif;
-
-  ?>
+  <?php if( get_field('report_colophon') ) : ?>
+  <div class="colophon">
+    <h2>Colophon</h2>
+    <?php the_field('report_colophon'); ?>
+  </div>
+  <?php endif; // colophon ?>
 
 </article><!-- #post-## -->

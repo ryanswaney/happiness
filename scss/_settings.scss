@@ -19,12 +19,20 @@ $base-z-index: 0;
 // Colors
 $base-bg-color: #b7b2b4;
 $base-font-color: #333;
-$color-accent: #ed1e79; 
-$highlight-color: #f99d1c;
+$color-accent: #ed1e79;
+$highlight-color: #059EBA;
+//$highlight-color: #f99d1c;
 $highlight-bg-color: #ed1e79;
 $base-border-color: #ccc;
 //$action-color: #40b4e4;
-$action-color: #ed1e79;
+//$action-color: #ed1e79;
+
+// #e3cc00 -- WHR 2016 Vol. 1 gold
+// #94bb33 -- WHR 2016 Vol. 2 green
+
+
+
+$action-color: #e3cc00;
 
 // Screen Sizing
 $medium-screen: em(640) !default;

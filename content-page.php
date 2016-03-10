@@ -7,7 +7,7 @@
 ?>
 
 <!-- PAGE -->
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="<?php echo $post->post_name; ?>" <?php post_class(); ?>>
   <header class="entry-header">
     <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
   </header><!-- .entry-header -->
@@ -16,7 +16,7 @@
     <?php the_content(); ?>
 
 
-    <?php 
+    <?php
       // Load MailChimp form on Learn More page
       if ( $post->post_name == 'learn-more' ) :
         get_template_part( 'content', 'mailchimp' );
@@ -29,4 +29,3 @@
     <?php //edit_post_link( __( 'Edit', 'happiness' ), '<span class="edit-link">', '</span>' ); ?>
   </footer><!-- .entry-footer -->
 </article><!-- #post-## -->
-
