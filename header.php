@@ -50,7 +50,6 @@
   </div>
 
   <div class="centered-navigation-wrapper">
-
     <!--
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="mobile-logo">
       <img src="<?php the_field('logo_mobile', 'option'); ?>">
@@ -59,13 +58,10 @@
     <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
     <nav role="navigation">
       <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
-      <!--
-      <li class="menu-item logo">
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo">
-          <img src="<?php the_field('logo', 'option'); ?>">
-        </a>
-      </li>
-      -->
+        
+        <li class="menu-item">
+           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="home-button" rel="home"><?php bloginfo( 'name' ); ?></a>
+        </li>
 
       <?php
 

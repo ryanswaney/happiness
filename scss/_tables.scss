@@ -55,6 +55,8 @@
       padding: $table-padding;
       vertical-align:top;
 
+      h4 { font-weight: 400; }
+
       a,
       button {
         @include button(flat, $highlight-color);
@@ -79,6 +81,13 @@
 
     tr.highlighted > td {
       background-color: $table-hover-background;
+
+      h4 { font-weight: 700; }
     } // highlighted table cell
   }
+}
+.entry-download-header {
+  font-size: 2em;
+  font-weight: 300;
+  padding: .25em 0 !important;
 }

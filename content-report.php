@@ -13,23 +13,26 @@
   </header><!-- .entry-header -->
 
   <div class="entry-content">
+    <?php
+    if ( has_post_thumbnail() ) :
+      the_post_thumbnail('medium', array('class' => 'alignright'));
+    endif;
 
-    <?php if ( is_page( 'home' ) || is_page( 'download' ) ) : ?>
-      <?php the_excerpt(); ?>
-    <?php else : ?>
-      <?php the_content(); ?>
-    <?php endif; ?>
-
+    if ( is_page( 'home' ) || is_page( 'download' ) ) :
+      the_excerpt();
+    else :
+      the_content();
+    endif; ?>
   </div><!-- .entry-content -->
 
-  <?php
-
-  // check if the repeater field has rows of data
+  <?php // check if the repeater field has rows of data
   if( have_rows('report_files') ):
-
   ?>
   <table class="table-downloads">
   <thead>
+    <tr>
+      <th colspan="3" class="entry-download-header">Download</th>
+    </tr>
     <tr>
       <th>Title</th>
       <th>File Size</th>
@@ -37,9 +40,7 @@
     </tr>
   </thead>
   <tbody>
-  <?php
-
-    // loop through the rows of data
+  <?php // loop through the rows of data
       while ( have_rows('report_files') ) : the_row();
 
       $attachment_id = get_sub_field('file');
@@ -48,14 +49,10 @@
       $description = $attachment_meta['description'];
       $url = $attachment_meta['url'];
       $filesize = $attachment_meta['filesizeHumanReadable'];
-      //$url = wp_get_attachment_url( $attachment_id );
-      //$title = get_the_title( $attachment_id );
-      //$description = get_post_meta($attachment_id, 'post_content');
-      //$filesize = size_format( filesize( get_attached_file( $attachment_id ) ), 2 );
   ?>
   <tr <?php if( get_sub_field('file_highlight') ) { echo 'class="highlighted"'; } ?>>
     <td>
-      <?php echo $title; ?>
+      <h4><?php echo $title; ?></h4>
       <?php if($description != ''): ?>
       <p><?php echo $description; ?></p>
       <?php endif; // description ?>

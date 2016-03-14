@@ -21,7 +21,7 @@
   color: #ED1E7B;
   padding: 0 .3em;
   border-left: 8px solid lighten(#17C6E6, 10%);
-  
+
   a {
     color: $highlight-color;
     text-decoration: none;
@@ -34,6 +34,13 @@
       color: lighten( $highlight-color, 20%);
     }
   }
+}
+
+.entry-title-small {
+  font-size: 2em;
+  font-weight: 300;
+  align: left;
+  border: none;
 }
 
 .entry-meta {
@@ -134,8 +141,22 @@ body.home {
   }
 }
 
+// newsletter styles
+.newsletters {
+  .entry-title {
+    font-size: 2em;
+    text-align: center;
+    border: none;
+  }
+}
+
 // Misc WordPress styles from the WPEditor
-.aligncenter,
+.aligncenter {
+  height: auto;
+  width: 25%;
+  margin: 1em auto;
+}
+
 .alignleft {
   width: auto;
   margin: auto 1em 1em 1em;

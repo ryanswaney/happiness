@@ -17,7 +17,7 @@
 
   //background-color: $centered-navigation-background;
   //background-color: $base-bg-color;
-  //border-bottom: 1px solid darken($centered-navigation-background, 6%);
+  border-bottom: 1px solid darken($centered-navigation-background, 6%);
   min-height: $centered-navigation-height;
   width: 100%;
   z-index: 9999;
@@ -88,7 +88,7 @@
 
     @include media ($horizontal-bar-mode) {
       display: block;
-      //text-align: center;
+      text-align: center;
     }
   }
 
@@ -133,7 +133,8 @@
     }
   }
 
-  li.current-menu-item {
+  li.current-menu-item,
+  li.current_page_parent {
     a { font-weight: 700; }
   }
 
@@ -268,6 +269,12 @@
       }
     }
   }
+}
+
+// Home button/link in primary navigation
+.home-button {
+  color: #17C6E6 !important;
+  font-weight: 700 !important;
 }
 
 // Navigation Posts/Pagination
