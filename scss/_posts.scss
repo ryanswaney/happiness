@@ -23,7 +23,7 @@
   border-left: 8px solid lighten(#17C6E6, 10%);
 
   a {
-    color: $highlight-color;
+    color: $highlight-bg-color;
     text-decoration: none;
     transition: color 0.5s ease;
     -webkit-transition: color 0.5s ease;
@@ -31,7 +31,7 @@
     &:active,
     &:focus,
     &:hover {
-      color: lighten( $highlight-color, 20%);
+      color: lighten( $highlight-bg-color, 20%);
     }
   }
 }
@@ -45,9 +45,7 @@
 
 .entry-meta {
   font-family: $base-font-family;
-  font-size: 1em;
-  font-style: italic;
-  text-align: center;
+  font-size: 80%;
 }
 
 .entry-content, .colophon {

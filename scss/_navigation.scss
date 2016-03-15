@@ -275,6 +275,12 @@
 .home-button {
   color: #17C6E6 !important;
   font-weight: 700 !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $highlight-bg-color !important;
+  }
 }
 
 // Navigation Posts/Pagination
