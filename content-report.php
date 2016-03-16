@@ -54,7 +54,7 @@
     <td>
       <h4><?php echo $title; ?></h4>
       <?php if($description != ''): ?>
-      <p><?php echo $description; ?></p>
+      <p class="file-description"><?php echo $description; ?></p>
       <?php endif; // description ?>
     </td>
     <td><?php echo $filesize; ?></td>
