@@ -19,7 +19,7 @@ if ( ! function_exists( 'happiness_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function happiness_setup() {
-  
+
   // Add default posts and comments RSS feed links to head.
   add_theme_support( 'automatic-feed-links' );
   /*
@@ -74,8 +74,12 @@ add_action( 'after_setup_theme', 'happiness_setup' );
 function happiness_scripts() {
   wp_enqueue_style( 'happiness-style', get_stylesheet_uri() );
 
+  wp_scripts()->add_data( 'jquery', 'group', 1 );
+  wp_scripts()->add_data( 'jquery-core', 'group', 1 );
+  wp_scripts()->add_data( 'jquery-migrate', 'group', 1 );
+
   wp_enqueue_script( 'mailchimp-validate', '//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js', array('jquery'), '', true);
-  
+
   wp_enqueue_script( 'happiness-js', get_template_directory_uri() . '/js/happiness.js', array('jquery'), '1.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'happiness_scripts' );
