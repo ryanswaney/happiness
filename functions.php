@@ -46,6 +46,16 @@ function happiness_setup() {
   add_theme_support( 'html5', array(
     'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
   ) );
+
+  /*  Add responsive container to embeds */
+
+  function jsc_embed_html( $html ) {
+      return '<div class="video">' . $html . '</div>';
+  }
+
+  add_filter( 'embed_oembed_html', 'jsc_embed_html', 10, 3 );
+  add_filter( 'video_embed_html', 'jsc_embed_html' );
+
   /*
    * Enable support for Post Formats.
    * See http://codex.wordpress.org/Post_Formats
